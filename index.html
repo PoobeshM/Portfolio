@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poobesh M - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      background: linear-gradient(135deg, #6b2472 0%, #5e046c 50%, #800c22 100%);
-      color: #9fef15;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .glow-text {
-      text-shadow: 0 0 8px #510a5d, 0 0 15px #00adf7;
-    }
-    .tech-bg {
-      background: url('https://www.transparenttextures.com/patterns/circuit-board.png') repeat;
-      background-size: cover;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .hover-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hover-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 4px 20px rgba(0, 150, 255, 0.4);
-    }
-    a {
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #facc15; /* Bright yellow hover */
-    }
+    html { scroll-behavior: smooth; }
+    .nav-link:hover { color: #3b82f6; }
   </style>
 </head>
-<body class="tech-bg">
-  <header class="p-6 flex flex-col items-center text-center bg-black bg-opacity-60 shadow-md">
-    <img src="me.jpg" alt="Poobesh M" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-4 animate-bounce" />
-    <h1 class="text-4xl font-bold mb-2 text-blue-400 glow-text">Poobesh M</h1>
-    <p class="text-gray-200">B.Tech Information Technology Student | Aspiring Full-Stack Developer</p>
-    <div class="mt-4 flex gap-6">
-      <a href="mailto:mpoobesh123@gmail.com" class="text-blue-300 hover:text-yellow-400">Email</a>
-      <a href="tel:+919345731299" class="text-blue-300 hover:text-yellow-400">Phone</a>
-      <a href="https://www.linkedin.com/in/m-poobesh-551826293/" class="text-blue-300 hover:text-yellow-400">LinkedIn</a>
-      <a href="https://github.com/PoobeshM" class="text-blue-300 hover:text-yellow-400">GitHub</a>
+<body class="bg-gray-50 text-gray-800 flex">
+
+<!-- SIDEBAR -->
+<aside class="hidden md:flex flex-col justify-between bg-white w-64 h-screen fixed left-0 top-0 border-r border-gray-200">
+  <div>
+    <div class="p-6 text-center">
+      <img src="me.jpg" alt="Poobesh M" class="w-24 h-24 rounded-full mx-auto mb-3">
+      <h1 class="text-lg font-bold text-blue-600">Poobesh M</h1>
+      <p class="text-sm text-gray-500">Full-Stack Developer</p>
     </div>
-  </header>
+    <nav class="flex flex-col space-y-4 px-6">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </div>
+  <div class="p-6 flex space-x-4 justify-center text-gray-500">
+    <a href="https://github.com/PoobeshM" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/m-poobesh-551826293/" target="_blank">LinkedIn</a>
+  </div>
+</aside>
 
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
-    <!-- About Section -->
-    <section class="text-center fade-in">
-      <h2 class="text-2xl font-bold text-blue-300 mb-2 glow-text">About Me</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto" style="color: black;">
-        Motivated and enthusiastic B.Tech Information Technology student at Sri Shakthi Institute of Engineering and Technology.
-        I have hands-on experience in web development using React.js and Node.js, with a strong interest in creating dynamic web applications.
-      </p>
-    </section>
+<!-- MAIN CONTENT -->
+<main class="flex-1 ml-0 md:ml-64">
 
-    <!-- Skills Section -->
-    <section class="fade-in">
-      <h2 class="text-2xl font-bold text-blue-300 mb-4 text-center glow-text">Technical Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-        <div class="bg-blue-800 p-4 rounded-lg hover-card font-medium text-gray-100">React.js</div>
-        <div class="bg-gray-800 p-4 rounded-lg hover-card font-medium text-gray-100">Node.js</div>
-        <div class="bg-blue-800 p-4 rounded-lg hover-card font-medium text-gray-100">JavaScript</div>
-        <div class="bg-gray-800 p-4 rounded-lg hover-card font-medium text-gray-100">MongoDB</div>
-        <div class="bg-blue-800 p-4 rounded-lg hover-card font-medium text-gray-100">SQL</div>
-        <div class="bg-gray-800 p-4 rounded-lg hover-card font-medium text-gray-100">C</div>
-        <div class="bg-blue-800 p-4 rounded-lg hover-card font-medium text-gray-100">Java</div>
-        <div class="bg-gray-800 p-4 rounded-lg hover-card font-medium text-gray-100">HTML</div>
-        <div class="bg-blue-800 p-4 rounded-lg hover-card font-medium text-gray-100">CSS</div>
+  <!-- HERO -->
+  <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-blue-600 text-white px-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Poobesh M</h1>
+    <p class="text-lg mb-6">B.Tech IT Student | Building Scalable Web Apps</p>
+    <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100">View My Work</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">About Me</h2>
+    <p class="text-gray-600 leading-relaxed">
+      I am a passionate B.Tech Information Technology student at Sri Shakthi Institute of Engineering and Technology.
+      Skilled in React.js, Node.js, and MongoDB, I enjoy building scalable and user-friendly applications that make an impact.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-600 mb-10">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-white p-6 rounded shadow">React.js</div>
+        <div class="bg-white p-6 rounded shadow">Node.js</div>
+        <div class="bg-white p-6 rounded shadow">JavaScript</div>
+        <div class="bg-white p-6 rounded shadow">MongoDB</div>
+        <div class="bg-white p-6 rounded shadow">SQL</div>
+        <div class="bg-white p-6 rounded shadow">Java</div>
+        <div class="bg-white p-6 rounded shadow">HTML</div>
+        <div class="bg-white p-6 rounded shadow">CSS</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section class="fade-in">
-      <h2 class="text-2xl font-bold text-blue-300 mb-4 text-center glow-text">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-4 rounded-lg hover-card">
-          <h3 class="font-bold text-lg text-blue-400">Direct Contract Farming Platform</h3>
-          <p class="text-gray-300 text-sm mt-2">
-            Developed a platform for farmers and consumers to interact directly for fair pricing and delivery.
-            Built with React.js, Node.js, and MongoDB.
-          </p>
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-600 mb-10">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
+        <img src="weather.png" alt="Weather App" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Weather API Web App</h3>
+          <p class="text-gray-500 text-sm mb-4">Real-time weather data using OpenWeatherMap API with dynamic UI updates.</p>
+          <a href="https://apiweather1.netlify.app/" class="text-blue-600 hover:underline">View Project →</a>
         </div>
-        <div class="bg-gray-800 p-4 rounded-lg hover-card">
-          <h3 class="font-bold text-lg text-blue-400">Weather API Web App</h3>
-          <p class="text-gray-300 text-sm mt-2">
-            A weather app using OpenWeatherMap API to fetch and display real-time weather data.
-            Features asynchronous JS and dynamic UI updates.
-          </p>
+      </div>
+
+
+      <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="watch.png" alt="Project 2" class="w-full">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Stopwatch App</h3>
+          <p class="text-sm text-gray-600 mb-4">A stopwatch with millisecond precision built using HTML, CSS, and JavaScript.</p>
+          <a href="https://pmstopwatch.netlify.app/" class="text-blue-600 font-medium">View Project →</a>
         </div>
       </div>
-    </section>
 
-    <!-- Education Section -->
-    <section class="fade-in">
-      <h2 class="text-2xl font-bold text-blue-300 mb-4 text-center glow-text">Education</h2>
-      <div class="bg-gray-800 p-4 rounded-lg hover-card text-center max-w-lg mx-auto">
-        <p class="font-semibold text-blue-200">B.Tech Information Technology</p>
-        <p class="text-gray-300">Sri Shakthi Institute of Engineering and Technology (2023-2027) | GPA: 7.89/10</p>
+      <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
+        <img src="tic.png" alt="Tic Tac Toe" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Tic Tac Toe Game</h3>
+          <p class="text-gray-500 text-sm mb-4">Interactive game built with HTML, CSS, and JavaScript.</p>
+          <a href="https://ttt92.vercel.app/" class="text-blue-600 hover:underline">View Project →</a>
+        </div>
       </div>
-    </section>
-  </main>
+      
+      <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
+        <img src="or.jpg" alt="Tic Tac Toe" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Farm Product Sales</h3>
+          <p class="text-gray-500 text-sm mb-4">Interactive website for farmer contract note genderated sales website.</p>
+          <a href="https://ttt92.vercel.app/" class="text-blue-600 hover:underline">View Project →</a>
+        </div>
+      </div>
 
-  <footer class="p-4 text-center text-sm text-gray-400 border-t border-blue-600 mt-8">
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="py-16 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-600 mb-10">Education</h2>
+    <div class="border-l-4 border-blue-600 pl-6 space-y-8">
+      <div>
+        <h3 class="font-semibold">B.Tech Information Technology</h3>
+        <p class="text-gray-500">Sri Shakthi Institute of Engineering and Technology (2023–2027) | GPA: 7.9/10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-blue-600 mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-8">Have a project or opportunity? Let’s connect!</p>
+      <a href="mailto:mpoobesh123@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Send Email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-gray-500 border-t">
     © 2025 Poobesh M. All rights reserved.
   </footer>
+
+</main>
+
 </body>
 </html>
